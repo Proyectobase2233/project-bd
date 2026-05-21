@@ -1,4 +1,4 @@
-# 🍕 Sistema de Restaurante / Delivery
+# Sistema de Restaurante / Delivery
 
 **Materia:** Modelado y Gestión de Base de Datos  
 **Proyecto:** Taller Final  
@@ -6,7 +6,7 @@
 
 ---
 
-## 👥 Equipo
+## Equipo
 
 | | |
 |---|---|
