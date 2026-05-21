@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.25.xsd">
+
+    <!-- Juan Pablo Rojas Calderón + Robert Andrés Osorio Patiño -->
+    <!-- Sistema Restaurante / Delivery -->
+
+    <!-- DDL: Tablas -->
+    <include file="ddl/001-rol.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/002-usuario.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/003-cliente.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/004-direccion.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/005-categoria.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/006-plato.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/007-insumo.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/008-receta.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/009-promocion.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/010-estado-pedido.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/011-repartidor.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/012-metodo-pago.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/013-pedido.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/014-detalle-pedido.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/015-pago.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/016-resena.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/017-auditoria.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/018-indices.sql" relativeToChangelogFile="true"/>
+
+    <!-- Objetos SQL - Juan Pablo -->
+    <include file="ddl/019-trigger-stock.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/020-procedure-repartidor.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/021-function-total.sql" relativeToChangelogFile="true"/>
+
+    <!-- Objetos SQL - Robert -->
+    <include file="ddl/022-trigger-auditoria.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/023-procedure-promocion.sql" relativeToChangelogFile="true"/>
+    <include file="ddl/024-function-ranking.sql" relativeToChangelogFile="true"/>
+
+    <!-- Datos -->
+    <include file="dml/canonical/001-roles.sql" relativeToChangelogFile="true"/>
+    <include file="dml/canonical/002-usuarios.sql" relativeToChangelogFile="true"/>
+    <include file="dml/canonical/003-categorias.sql" relativeToChangelogFile="true"/>
+    <include file="dml/canonical/004-estados.sql" relativeToChangelogFile="true"/>
+    <include file="dml/canonical/005-metodos-pago.sql" relativeToChangelogFile="true"/>
+
+    <include file="dml/volumetric/001-clientes.sql" relativeToChangelogFile="true"/>
+    <include file="dml/volumetric/002-direcciones.sql" relativeToChangelogFile="true"/>
+    <include file="dml/volumetric/003-platos.sql" relativeToChangelogFile="true"/>
+    <include file="dml/volumetric/004-insumos.sql" relativeToChangelogFile="true"/>
+    <include file="dml/volumetric/005-recetas.sql" relativeToChangelogFile="true"/>
+    <include file="dml/volumetric/006-promociones.sql" relativeToChangelogFile="true"/>
+    <include file="dml/volumetric/007-repartidores.sql" relativeToChangelogFile="true"/>
+    <include file="dml/volumetric/008-pedidos.sql" relativeToChangelogFile="true"/>
+    <include file="dml/volumetric/009-detalles.sql" relativeToChangelogFile="true"/>
+    <include file="dml/volumetric/010-pagos.sql" relativeToChangelogFile="true"/>
+    <include file="dml/volumetric/011-resenas.sql" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

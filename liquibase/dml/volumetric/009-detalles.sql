@@ -1,0 +1,27 @@
+--changeset equipo:vol009
+INSERT INTO detalle_pedido (id_pedido, id_plato, cantidad, precio_unitario, subtotal, notas) VALUES
+(1, 4, 1, 28000, 28000, 'Sin cebolla'),
+(1, 2, 1, 22000, 22000, 'Salsa aparte'),
+(2, 4, 1, 28000, 28000, NULL),
+(3, 9, 1, 35000, 35000, NULL),
+(3, 8, 1, 32000, 32000, 'Extra queso'),
+(4, 8, 1, 32000, 32000, 'Extra queso'),
+(5, 18, 1, 65000, 65000, NULL),
+(6, 6, 1, 26000, 26000, 'Sin sal'),
+(7, 5, 1, 38000, 38000, NULL),
+(8, 2, 1, 22000, 22000, 'Picantes'),
+(9, 19, 1, 55000, 55000, 'Fiesta cumpleaños'),
+(10, 1, 1, 18500, 18500, NULL),
+(11, 10, 1, 29000, 29000, 'Bien cocido'),
+(12, 9, 1, 35000, 35000, 'Bien horneada'),
+(13, 8, 1, 32000, 32000, NULL),
+(13, 9, 1, 35000, 35000, 'Extra pepperoni'),
+(14, 7, 1, 24000, 24000, 'Salsa aparte'),
+(15, 18, 1, 65000, 65000, 'Para 4 personas'),
+(16, 3, 1, 16500, 16500, 'Sin jalapeños'),
+(17, 4, 1, 28000, 28000, NULL),
+(17, 2, 1, 22000, 22000, 'Salsa BBQ extra'),
+(18, 8, 1, 32000, 32000, NULL),
+(19, 2, 1, 22000, 22000, NULL),
+(20, 5, 1, 38000, 38000, 'Doble tocineta');
+--rollback DELETE FROM detalle_pedido;

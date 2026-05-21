@@ -1,0 +1,27 @@
+--changeset equipo:vol002
+INSERT INTO direccion (id_cliente, alias, calle, numero, ciudad, referencia, es_principal) VALUES
+(1, 'Casa', 'Calle 45', '12-34', 'Bogotá', 'Casa blanca', TRUE),
+(1, 'Oficina', 'Carrera 7', '89-10', 'Bogotá', 'Torre Central', FALSE),
+(2, 'Casa', 'Av Chile', '23-45', 'Bogotá', 'Conjunto Los Pinos', TRUE),
+(2, 'Mamá', 'Calle 80', '56-78', 'Bogotá', 'Apto 302', FALSE),
+(3, 'Casa', 'Carrera 15', '34-56', 'Bogotá', 'Parque 93', TRUE),
+(4, 'Apto', 'Calle 100', '78-90', 'Bogotá', 'Torre 2 apto 1501', TRUE),
+(5, 'Casa', 'Av Boyacá', '12-34', 'Bogotá', 'Portal de Suba', TRUE),
+(6, 'Casa', 'Calle 26', '45-67', 'Bogotá', 'Centro comercial', TRUE),
+(7, 'Casa', 'Carrera 68', '89-12', 'Bogotá', 'Modelia', TRUE),
+(7, 'Trabajo', 'Calle 13', '34-56', 'Bogotá', 'Zona industrial', FALSE),
+(8, 'Casa', 'Av El Dorado', '67-89', 'Bogotá', 'Aeropuerto', TRUE),
+(9, 'Casa', 'Calle 127', '12-34', 'Bogotá', 'Usaquén', TRUE),
+(10, 'Casa', 'Carrera 50', '45-67', 'Bogotá', 'Palermo', TRUE),
+(11, 'Casa', 'Calle 72', '78-90', 'Bogotá', 'TM', TRUE),
+(12, 'Casa', 'Av Circunvalar', '23-45', 'Bogotá', 'Suba', TRUE),
+(13, 'Casa', 'Calle 53', '56-78', 'Bogotá', 'Chapinero', TRUE),
+(14, 'Casa', 'Carrera 7', '89-10', 'Bogotá', 'Candelaria', TRUE),
+(15, 'Casa', 'Calle 170', '34-56', 'Bogotá', 'Cedritos', TRUE),
+(3, 'Oficina', 'Calle 94', '12-34', 'Bogotá', 'Centro empresarial', FALSE),
+(5, 'Papá', 'Calle 80', '67-89', 'Bogotá', 'Apto 501', FALSE),
+(8, 'Novio', 'Av Chile', '45-67', 'Bogotá', 'Torre 3 apto 802', FALSE),
+(10, 'Uni', 'Carrera 7', '78-90', 'Bogotá', 'Nacional', FALSE),
+(12, 'Gym', 'Calle 116', '23-45', 'Bogotá', 'Bodytech', FALSE),
+(14, 'Trabajo', 'Calle 26', '56-78', 'Bogotá', 'Centro Int', FALSE);
+--rollback DELETE FROM direccion;

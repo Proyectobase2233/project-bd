@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: restaurante-db
+    environment:
+      POSTGRES_DB: restaurante_delivery
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d restaurante_delivery"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  liquibase:
+    image: liquibase/liquibase:4.25
+    container_name: restaurante-liquibase
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./liquibase:/liquibase/changelog
+      - ./liquibase.properties:/liquibase/liquibase.properties
+    working_dir: /liquibase
+    command: update
+    environment:
+      LIQUIBASE_COMMAND_URL: jdbc:postgresql://postgres:5432/restaurante_delivery
+      LIQUIBASE_COMMAND_USERNAME: admin
+      LIQUIBASE_COMMAND_PASSWORD: admin123
+      LIQUIBASE_COMMAND_CHANGELOG_FILE: changelog/db.changelog-master.xml
+
+volumes:
+  postgres_data:
